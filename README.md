@@ -29,10 +29,9 @@
 - GoldRush Block Explorer Kit from Covalent: Enhances blockchain exploration and transaction tracking, improving user experience and efficiency.
 
 
-[Covalent API CODE](https://github.com/Web3-Agent/avalanche-web3agent/blob/main/app/_components/chat.tsx)
+Covalent API CODE: [https://github.com/Web3-Agent/avalanche-web3agent/blob/main/app/_components/chat.tsx](https://github.com/Web3-Agent/avalanche-web3agent/blob/main/app/_components/chat.tsx)
 
-## Contract Deployed
-[0x047E7AfeD1C9c31Eb8d6B130d48c54bEF9c7c29C](https://testnet.snowtrace.io/address/0x047E7AfeD1C9c31Eb8d6B130d48c54bEF9c7c29C)
+#### Contract Deployed : [0x047E7AfeD1C9c31Eb8d6B130d48c54bEF9c7c29C](https://testnet.snowtrace.io/address/0x047E7AfeD1C9c31Eb8d6B130d48c54bEF9c7c29C)
 
 
 ## Particle Network: 
