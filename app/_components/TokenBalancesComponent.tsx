@@ -4,6 +4,8 @@ import moment from 'moment'
 import { useAccount, useNetwork } from 'wagmi';
 import { CHAIN_ID_TO_NETWORK_MAPPING } from '../../constants/ChainIdToNetworkMapping';
 import axiosHelper from '../api-helpers/axios/axiosHelper';
+import { TokenBalancesListView, AddressActivityListView } from "@covalenthq/goldrush-kit";
+
 interface TokenData {
   symbol: string;
   name: string;
@@ -36,36 +38,17 @@ const TokenBalancesComponent: React.FC = () => {
     <div>
       <ul>
         <li className={"flex   !text-gray-800  text-lg font-semibold items-center gap-x-4 mt-20 mb-6 ml-2"}>
-          <h2>Balances</h2>
+          <h2>Token Balances</h2>
         </li>
-        {!accountBalance?.items?.length && (
+        {/* {!accountBalance?.items?.length && (
           <div className='flex items-center justify-start text-base font-semibold px-2'>No Data Found</div>
-        )}
-        {accountBalance?.items?.map((token: TokenData, index: number) => (
+        )} */}
+        {/* {accountBalance?.items?.map((token: TokenData, index: number) => (
           <li
             className={"flex  rounded-xl p-2 cursor-pointer bg-white border-2 active:bg-gray-200 !text-gray-700  text-sm font-semibold items-center gap-x-4 mt-2"}
             key={index}
           >
-            {/* <div
-              style={{
-                width: '30px',
-                height: '30px',
-                borderRadius: '50%',
-                overflow: 'hidden',
-                // border: '2px solid black',
-                marginLeft: "5px"
-              }}
-            >
-              <img
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                }}
-                src={token?.logo_urls?.token_logo_url}
-                alt={token?.logo_url?.chain_logo_url}
-              />
-            </div> */}
+          
             {token?.contract_ticker_symbol} : {parseFloat((token.balance || '0')).toFixed(2)}
           </li>
         ))}
@@ -73,8 +56,21 @@ const TokenBalancesComponent: React.FC = () => {
           {accountBalance?.updated_at?.length && (
             <span className='text-xs text-gray-400 italic'>Last Updated @ {moment(accountBalance.updated_at).format('LLL') || 'NA'}</span>
           )}
-        </li>
-      </ul>
+        </li>*/}
+      </ul> 
+      <div>
+        <TokenBalancesListView
+    chain_names={[
+        
+        "mumbai",
+        
+        "avalanche-testnet",
+        
+    ]} // list of chains
+    hide_small_balances
+    address="0x20613aBe93e4611Cf547b4395E4248c6129c8697" //sample address
+/>
+      </div>
     </div>
   );
 

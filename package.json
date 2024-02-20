@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@covalenthq/client-sdk": "^0.6.7",
+    "@covalenthq/goldrush-kit": "^0.4.4",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@erc725/erc725.js": "^0.21.2",

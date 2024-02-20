@@ -6,6 +6,8 @@ import { IconArrowRight, IconArrowElbow } from '@/app/_components/ui/icons'
 import { IconCheck, IconEdit } from './ui/icons'
 import { useActiveTabStates } from '../../providers/operations';
 import React from 'react';
+import { TokenTransfersListView , AddressActivityListView, TokenBalancesListView } from "@covalenthq/goldrush-kit";
+
 
 const exampleMessages = [
   {
@@ -135,6 +137,7 @@ export function EmptyScreen({ setInput }: Pick<UseChatHelpers, 'setInput'>) {
           <p className="leading-normal my-2 px-12 text-lg text-muted-foreground text-center">
             Step into the future with the incredible capabilities of Artificial Intelligence. Experience a new era where mundane tasks are automated, and complex problems find elegant solutions. Harness the power of AI to elevate your projects, streamline processes, and unlock opportunities like never before. The possibilities are boundless—now is the time to integrate AI into your endeavors and witness the extraordinary transformation it brings. Embrace the future, now at your fingertips.
           </p>
+          
 
         </div>
       </div>
