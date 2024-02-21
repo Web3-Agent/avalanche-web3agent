@@ -20,6 +20,7 @@ import { TablelandProvider } from '@/context/TablelandProvider';
 import { Header } from './_components/header';
 import Navbar from './_components/Navbar';
 import { MetaMaskProvider } from '@metamask/sdk-react';
+import { GoldRushProvider } from '@covalenthq/goldrush-kit';
 
 // const arbitrumSepolia = ({
 //   id: 421614,
@@ -64,6 +65,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={ inter.className }>
+                 <GoldRushProvider apikey={process.env.NEXT_PUBLIC_COVALENT_KEY} mode="light" color="emerald">
+
         <Web3Provider>
         <Providers attribute="class" defaultTheme="system" enableSystem>
           {/* <WagmiConfig client={ wagmiClient }> */}
@@ -108,6 +111,7 @@ export default function RootLayout({
 
           </Providers>
           </Web3Provider>
+           </GoldRushProvider>
       </body>
     </html>
   )
